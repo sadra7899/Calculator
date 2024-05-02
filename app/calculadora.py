@@ -87,11 +87,11 @@ class Calculadora(object):
             else:
                 theme.add_command(label=name, command=partial(self._change_theme_to, name))
 
-        calc_menu.add_cascade(label='Configuração', menu=config)
+        calc_menu.add_cascade(label='Color Mode', menu=config)
         config.add_cascade(label='Tema', menu=theme)
 
         config.add_separator()
-        config.add_command(label='Sair', command=self._exit)
+
 
     def _change_theme_to(self, name='Dark'):
         self.settings['current_theme'] = name
